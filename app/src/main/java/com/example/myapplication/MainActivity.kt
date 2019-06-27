@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -28,6 +29,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun randomMe(view: View) {
+
+        val randomIntent = Intent(this, SecondActivity::class.java)
+
+        startActivity(randomIntent)
 
     }
 }

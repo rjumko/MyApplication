@@ -52,6 +52,7 @@
             app:layout_constraintHorizontal_bias="0.452"/>
     <Button
             android:text="@string/random_button"
+            android:onClick="randomMe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button3"
