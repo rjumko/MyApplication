@@ -32,6 +32,9 @@ class MainActivity : AppCompatActivity() {
 
         val randomIntent = Intent(this, SecondActivity::class.java)
 
+        val countString = textView.text.toString()
+        val count = Integer.parseInt(countString)
+        randomIntent.putExtra(SecondActivity.TOTAL_COUNT, count)
         startActivity(randomIntent)
 
     }
