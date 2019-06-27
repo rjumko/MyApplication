@@ -3,6 +3,8 @@ package com.example.myapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_second.*
+import java.util.*
+
 
 class SecondActivity : AppCompatActivity() {
 
@@ -19,6 +21,18 @@ class SecondActivity : AppCompatActivity() {
     fun showRandomNumber() {
         val count = intent.getIntExtra(TOTAL_COUNT, 0)
 
-        textViewRandom.setText(count)
+        val random = Random()
+
+        var randomInt = 0
+
+        if (count > 0) {
+            randomInt = random.nextInt(count+1)
+        }
+
+
+        textViewRandom.text = randomInt.toString()
+
+        textViewLabel.text = getString(R.string.random_heading, count)
+
     }
 }
