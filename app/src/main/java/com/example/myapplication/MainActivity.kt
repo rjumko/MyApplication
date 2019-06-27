@@ -26,4 +26,8 @@ class MainActivity : AppCompatActivity() {
         count++
         textView.setText(count.toString())
     }
+
+    fun randomMe(view: View) {
+
+    }
 }
